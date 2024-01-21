@@ -1,6 +1,8 @@
 # Food Ordering System
 
-This is a [Next.js](https://nextjs.org/) project for a university assignment - a Food Ordering System.
+My Name is Marius Nica
+
+This is a [Next.js](https://nextjs.org/) project for the Solent University Final assignment  - a Food Ordering System.
 
 ## Getting Started
 
