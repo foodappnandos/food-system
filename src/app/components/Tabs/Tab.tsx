@@ -13,26 +13,26 @@ const Tab = ({
   labelClasses?: string;
   length: any;
 }) => {
+  console.log({ isActive, label, length });
+
   return (
     <li className={`me-2 ${isActive ? "active" : ""}`}>
       <a
         href="#"
         onClick={onClick}
-        className={`inline-block p-4 rounded-t-lg  ${label} ${
+        className={` flex p-4 rounded-t-lg  ${label} ${
           isActive
             ? "text-blue-600 bg-gray-100 dark:bg-gray-800 dark:text-blue-500"
             : `hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300 ${labelClasses}`
         }`}
       >
         {label}
-        <small
-          className={`text-black font-bold ${
-            isActive && "!text-black"
-          }  ${labelClasses}`}
+        <p
+          style={{ color: isActive ? "black" : "white" }}
+          className={` ${labelClasses} font-bold`}
         >
-          {" "}
           {`(${length})`}
-        </small>
+        </p>
       </a>
     </li>
   );

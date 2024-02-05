@@ -141,7 +141,7 @@ const TableList = ({
     return (
       <div className="w-[80%] bg-main h-fit">
         <Tabs
-          labelClasses="!text-white hover:!text-black !rounded-none"
+          labelClasses="text-white hover:!text-black !rounded-none"
           tabClasses="!text-black !bg-white"
           tabs={tabsData}
         />

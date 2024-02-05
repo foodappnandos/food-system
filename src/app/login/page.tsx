@@ -7,9 +7,16 @@ import { useAuth } from "../utils/useHooks/authHook";
 import toast from "react-hot-toast";
 import { IUser } from "../utils/type";
 import Link from "next/link";
-import { redirect } from "next/navigation";
-
+import { redirect, useRouter } from "next/navigation";
 const Page = () => {
+  const { data: session } = useSession();
+
+  if (session) {
+    redirect("/");
+  }
+
+  const { push } = useRouter();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);

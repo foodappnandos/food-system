@@ -36,12 +36,11 @@ const Page = () => {
     delivered: [],
   });
 
-  if (!session) {
-    redirect("/login");
-  } else {
-    if (session.user.role == "user") redirect("/");
-    if (session.user.role == "delivery") redirect("/delivery");
-  }
+  console.log({ session });
+
+  if (!session) redirect("/login");
+  if (session?.user.role == "user") redirect("/");
+  if (session?.user.role == "delivery") redirect("/delivery");
 
   useEffect(() => {
     getAllUserList(
